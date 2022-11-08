@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./img/todo-image.jpg);
+}
+
+.todo-box {
+    width: 20%;
+    height: 50vh; /* vh como medida de altura para deixar responsivo */
+    padding: 30px;
+    margin: auto; /* centraliza minha div */
+    margin-top: 12rem; /* rem pois deixa responsivo */
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.971);
+    
+}
+
+h2 {
+    font-size: 34px;
+}
+
