@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
     <title>To-do avançado</title>
 </head>
@@ -11,30 +12,65 @@
 <div>
 <div class="todo-box">
     <h2>Todo Avançado</h2>
-    <form>
+    <form id="todo-form">
     <hr>
-    <label id="descricao-campo1">Adicione sua tarefa:</label>
-    <br>
-    <input type="text" value="O que você vai fazer?" id="campo1">
+    <h3 id="adicionar-tarefa-campo"> Adicione sua tarefa:</h3>
+    <input type="text" placeholder="O que você vai fazer?" id="todo-input">
     <button type="submit" class="icone-mais">
-        +
+        <i class="fa-light fa-plus"></i>
     </button>
     </form>
-    <hr>
-    <label id="descricao-campo2">Pesquisar:</label>
+    <form id="edit-form" class="">
+    <h3>Edite sua tarefa:</h3>
+    <div class="form-control">
+    <input type="text" id="edit-input">
+    <button type="submit">
+        <i class="fa-sharp fa-solid fa-check-double"></i>
+    </button>
     <br>
-    <input type="text" value="Buscar..." id="campo2">
+    <button id="cancel-edit-btn">Cancelar</button>
+    </div>
+    </form>
+    <hr>
+    <h3 id="search">Pesquisar:</h3>
+    <form>
+    <input type="text" id="search-input" placeholder="Buscar...">
+    </form>
     <div>
-    <label id="descricao-campo1">Filtrar:</label>
-    <select value="Todos" id="campo3">
+    <h3 id="filtrar-campo">Filtrar:</h3>
+    <select id="campo3">
         <option value="all">Todos</option>
         <option value="done">Feitos</option>
         <option value="todo">A fazer</option>
     </select>
-    
-</div>
+    </div>
+    <hr>
+    <div class="todo done">
+    <h4 class="">Estou fazendo alguma coisa</h4>
+    <button id="check-btn">
+        <i class="fa-solid fa-check"></i>
+    </button>
+    <button id="edit-btn">
+        <i class="fa-solid fa-pen"></i>
+    </button>
+    <button id="erase-btn">
+        <i class="fa-solid fa-x"></i>
+    </button>
+    </div>
+    <div class="todo"> <!--adicionar o done, assim que alterar o css altera junto-->
+    <h4>Estou estudando JavaScript</h4>
+    <button>
+        <i class="fa-solid fa-check"></i>
+    </button>
+    <button>
+        <i class="fa-solid fa-pen"></i>
+    </button>
+    <button>
+        <i class="fa-solid fa-x"></i>
+    </button>
+    </div> 
 </div>
 </div>
 </body>
-<script src="script.js"></script>
+ <script src="script.js" defer></script> <!--utilizo o defer pq utilizaremos o DOM, e ele faz com que o sarquivos carreguem após o html não gerando erros de arquivos não inicializados ainda -->
 </html>

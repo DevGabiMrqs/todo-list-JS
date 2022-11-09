@@ -2,14 +2,17 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(./img/todo-image.jpg);
+    background-position: center;
+    background-image: cover;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .todo-box {
     width: 20%;
-    height: 50vh; /* vh como medida de altura para deixar responsivo */
+    height: 68vh; /* vh como medida de altura para deixar responsivo */
     padding: 30px;
     margin: auto; /* centraliza minha div */
-    margin-top: 12rem; /* rem pois deixa responsivo */
+    margin-top: 10rem; /* rem pois deixa responsivo */
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.971);
     
@@ -19,3 +22,45 @@ h2 {
     font-size: 34px;
 }
 
+button {
+    color: rgb(19, 19, 140);
+    font-weight: bolder;
+    /* pointer-events: none; */
+    border-radius: 10px;
+}
+
+input,
+select {
+    padding: 0.25 rem 0.5 rem;
+}
+
+.hide {
+    /* display: none; minha edição de tarefa some */
+}
+
+#cancelar-btn {
+    margin-top: 0.5rem;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: .3s;
+}
+
+.todo button {
+    margin-left: 0.4rem;
+}
+
+.done {
+    background-color: rgb(192, 160, 202);
+}
+
+.done h4 {
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
+}
